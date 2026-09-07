@@ -1,0 +1,93 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ===== Virtual env =====
+venv/
+.venv/
+env/
+ENV/
+.conda/
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+*.ipynb
+
+# ===== 数据 / 权重 / 日志 =====
+# 项目数据在 data/ 目录中，不进仓库
+data/
+datasets/
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+*.dcm
+*.dicom
+*.pkl
+*.npy
+*.npz
+*.h5
+*.hdf5
+
+# 模型权重与训练产物
+checkpoints/
+weights/
+runs/
+output/
+outputs/
+logs/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+
+# ===== 训练中间结果 =====
+results/
+metrics/
+*.log
+test_compare.json
+ablation_compare.json
+stop_summary.json
+training_metrics.csv
+
+# ===== LaTeX / 论文相关 =====
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.fls
+*.fdb_latexmk
+*.xdv
+
+# ===== 操作系统 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 临时文件 =====
+*.tmp
+*.bak
+*.orig
+*~
+.cache/
