@@ -60,7 +60,7 @@ code/
 │   ├── MuScMoEHeatmap.py
 │   └── shaptest.py
 │
-└── supplementary/      # R2 审稿补充实验（新增）
+└── supplementary/      # 补充实验（新增）
     ├── 1_overfit_train_eval.py
     ├── 2_single_wavelet_train_eval_db1.py
     ├── 3_5sample_cv_runner.py
@@ -120,27 +120,6 @@ Key config knobs (top of `trainMuScMoE.py`):
 
 ---
 
-## R2 Supplementary Experiments
-
-All five scripts live under `supplementary/` and target specific reviewer concerns:
-
-| # | File | Reviewer Question Addressed | Inputs Required |
-| --- | --- | --- | --- |
-| 1 | `1_overfit_train_eval.py` | "Convergence of training loss alone does not establish absence of overfitting" (Reviewer #4) — runs best vs final checkpoint on a fixed test split and reports ΔW-Acc / ΔAUC / ΔAP per task. | Trained checkpoints from the full 4-shared-9-task dual-wavelet model. |
-| 2 | `2_single_wavelet_train_eval_db1.py` | "Why dual-wavelet?" — ablates to a single `db1` wavelet, all else identical, to isolate the contribution of the dual branch. | None beyond data. |
-| 3 | `3_5sample_cv_runner.py` | "Include standard deviations or p-values based on multiple random splits" (Reviewer #2) — five stratified sub-samples (100 / 200 / 300 / 800 / 912) with repeated random splits. | None beyond data. |
-| 4 | `4_reader_dist_diag.py` | "Reader distribution is unclear" — counts how many of the four LIDC radiologists annotated each nodule (4 / 3 / 2 / 1). | LIDC-IDRI raw XML tree. |
-| 5 | `5_fleiss_kappa.py` | "Inter-rater agreement not reported" — Fleiss κ across the four radiologists on the nine characteristics. | LIDC-IDRI raw XML tree. |
-
-Run any one of them with:
-
-```bash
-python supplementary/<file>.py
-```
-
-Each script is self-contained; absolute paths to data/weight directories live at the top of each file for easy editing.
-
----
 
 
 ## Citation
