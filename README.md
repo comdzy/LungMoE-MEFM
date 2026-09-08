@@ -142,13 +142,6 @@ Each script is self-contained; absolute paths to data/weight directories live at
 
 ---
 
-## Reproducibility Notes
-
-- Splits are deterministic and derived from `dataUtil/datashffule.py` with a fixed seed.
-- The cloud runs that produced the reported numbers are reproducible from the same seed on the same PyTorch / CUDA versions; numerical drift of < 0.5% per metric is normal across hardware.
-- The full 4-expert-9-task training run takes ~14 h on a single RTX 4090 (24 GB). The two supplementary ablations each take 4–6 h.
-
----
 
 ## Citation
 
